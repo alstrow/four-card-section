@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--Very-Light-Gray);
+  font-family: "Poppins";
+  padding: 3rem;
+  display: grid;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.title h2 {
+  font-weight: 200;
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.title h1 {
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+.title p {
+  color: var(--Grayish-Blue);
+  max-width: 35rem;
+  margin: auto;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 0.7fr);
+  grid-auto-flow: column;
+  gap: 3rem;
+}
+
+.card {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.29);
+  size: 1.1;
+  transition-duration: 0.2s;
+}
+
+/* It takes the first 2 on the same child for some reason */
+
+/* .card:nth-child(1) {
+  border-top: solid 4px var(--Cyan);
+}
+.card:nth-child(2) {
+  border-top: solid 4px var(--Red);
+}
+.card:nth-child(3) {
+  border-top: solid 4px var(--Orange);
+}
+.card:nth-child(4) {
+  border-top: solid 4px var(--Blue);
+} */
+
+.card h3 {
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+}
+
+.duo {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+img {
+  max-width: 4rem;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .card {
+    max-width: 20rem;
+  }
+  .title h1 {
+    font-size: 1.5rem;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+  }
+  .title p {
+    font-size: 0.8rem;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
+}
